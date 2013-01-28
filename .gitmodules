@@ -1,3 +1,6 @@
 [submodule "bunble/fugitive"]
 	path = bunble/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "solarized"]
+	path = solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
