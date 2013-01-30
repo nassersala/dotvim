@@ -72,3 +72,7 @@ let g:ctrlp_working_path_mode = 'ra'
 set number
 set showtabline=2
 set cmdheight=2
+
+"gary stuff
+"easy alternating between files
+map ,, <C-^>
