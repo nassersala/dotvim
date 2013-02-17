@@ -31,3 +31,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/syntactic"]
+	path = bundle/syntactic
+	url = https://github.com/scrooloose/syntastic.git
