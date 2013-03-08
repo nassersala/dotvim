@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/reham/ruby/command_line_apps/recipes/features/support'
+let g:netrw_dirhist_2='/Users/reham/ruby/command_line_apps/recipes'
+let g:netrw_dirhist_3='/Users/reham/.vim'
+let g:netrw_dirhist_4='/Users/reham/ruby/mirath'
+let g:netrw_dirhist_5='/Users/reham/unix_lesson'
+let g:netrw_dirhist_6='/Users/reham/unix_lesson/recipes'
+let g:netrw_dirhist_7='/Users/reham/unix_lesson/recipes/bin'
+let g:netrw_dirhist_8='/Users/reham/ruby/binaryClock'

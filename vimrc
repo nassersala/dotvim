@@ -1,12 +1,19 @@
 call pathogen#infect()
 
-set background=dark nocompatible
+"noremap h <NOP>
+"noremap j <NOP>
+"noremap k <NOP>
+"noremap l <NOP>
+
+"Bubble single lines
+nmap <C-Up> ddkP
+nmap <C-Down> ddP
+
 set directory=/tmp//
 
 map ,w :w<cr>
 
-
-let g:solarized_termcolors=256
+set background=dark
 colorscheme solarized
 
 "for clang autocomplete
@@ -73,6 +80,38 @@ set number
 set showtabline=2
 set cmdheight=2
 
-"gary stuff
+"gary's stuff
 "easy alternating between files
 map ,, <C-^>
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
+" Clears the search buffer when hitting retrun
+:nnoremap <CR> :nohlsearch<cr>
+noremap <leader><leader> <c-^>
+
+""""""""""""""""""""""""""""""""""
+"RENAME CURRENT FILE
+"""""""""""""""""""""""""""""""
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'))
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""
+" PROMOTE VARIABLE TO RSPEC LET
+"""""""""""""""""""""""""""""""""""""""""""
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
