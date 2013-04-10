@@ -16,6 +16,8 @@ map ,w :w<cr>
 set background=dark
 colorscheme solarized
 
+set cursorline
+
 "for clang autocomplete
 let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 let mapleader=","
