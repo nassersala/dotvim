@@ -24,6 +24,8 @@ let mapleader=","
 nmap <leader>gc :silent Git add -A\|:Gcommit<CR>
 map <leader>l :ListMethods
 
+
+
 set guioptions-=r " removes right hand scroll bar
 set go-=l " removes left hand scroll bar
 autocmd user rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
@@ -34,6 +36,9 @@ imap jj <esc>
 nnoremap <silent> <c-s> :if expand("%") == ""<cr>browse confirm w<cr>else<cr>confirm w<cr>endif<cr>
 "edit at start of the line
 map <silent> <C-h> ^cw
+
+map <leader>pn :sp ~/Dropbox/work/notes/project-notes.txt
+
 "duplicate line
 vmap D y'>p
 
@@ -112,8 +117,8 @@ function! PromoteToLet()
   :normal! dd
   " :exec '?^\s*it\>'
   :normal! P
-  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
-  :normal ==
+:.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+:normal ==
 endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
