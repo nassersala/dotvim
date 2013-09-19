@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/reham/ruby/goos/goos-ruby/lib'
+let g:netrw_dirhist_2='/Users/reham/ruby/goos/goos-ruby/lib/xmpp'
+let g:netrw_dirhist_3='/Users/reham/ruby/rails_projects/sample_app'
+let g:netrw_dirhist_4='/Users/reham/ruby/rails_projects/sample_app/app'
+let g:netrw_dirhist_5='/Users/reham/ruby/rails_projects/sample_app/app/models'
+let g:netrw_dirhist_6='/Users/reham/ruby/rails_projects/sample_app'
