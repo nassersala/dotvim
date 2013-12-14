@@ -17,6 +17,9 @@ let mapleader=","
 nmap <leader>gc :silent Git add -A\|:Gcommit<CR>
 map <leader>l :ListMethods
 
+"ensure all Objective-C sources are treated as such
+au BufNewFile,BufRead *.h,*.m,*.pch set filetype=objc
+
 
 set guioptions-=r " removes right hand scroll bar
 set go-=l " removes left hand scroll bar
